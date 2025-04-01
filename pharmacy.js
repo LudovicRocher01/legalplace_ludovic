@@ -61,6 +61,7 @@ export class Pharmacy {
   }
 
   updateExpireDate(drug) {
+    // Je bloque expiresIn à 0 minimum en considérant que cela décompte seulement le nombre de jour avant expiration
     if (drug.name != "Magic Pill" && drug.expiresIn > 0) {
       drug.expiresIn -= 1;
     }
