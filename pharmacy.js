@@ -53,7 +53,7 @@ export class Pharmacy {
   }
 
   updateExpireDate(drug) {
-    if (drug.name != "Magic Pill") {
+    if (drug.name != "Magic Pill" && drug.expiresIn > 0) {
       drug.expiresIn -= 1;
     }
   }
